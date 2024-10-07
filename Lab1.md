@@ -1,5 +1,5 @@
 <h1>Capstone Project: Building a Customer Onboarding App - Lab 01</h1>
-<h1>Description</h1>
+<h2>Description</h2>
 Customer onboarding is one of the most important stages of a customer’s journey with a bank. During this stage, the bank and customers exchange significant information. This exchange involves obtaining documentation needed to meet regulatory requirements and provide relevant products and services to customers.
 <br />
 
