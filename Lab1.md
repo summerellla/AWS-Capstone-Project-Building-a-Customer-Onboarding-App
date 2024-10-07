@@ -28,6 +28,10 @@ Image description: The diagram depicts the KYC application architectural diagram
 
 <b>IAM AWS Identity and Access Management:</b> (IAM) is a web service that helps you securely control access to AWS resources. With IAM, you can centrally manage permissions that control which AWS resources users can access. You use IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources.
 
+<h4>Walkthrough:</h4>
+
+<br />
+First, I used the AWS Management Console to create an S3 bucket where I configured the settings so the name included my account ID, the bucket encryption was set to SSE-S3, and the bucket was set to not be public.
 <br />
 
 ![lab-1(1)](https://github.com/user-attachments/assets/6041c244-22ab-4a00-b8c8-8397bfdee8b5)
@@ -37,8 +41,12 @@ Image description: The diagram depicts the KYC application architectural diagram
 
 <br />
 
+Next, I configured a policy on the document bucket that I created in the previous task to deny all Amazon S3 actions from any principal over HTTP (TLS is not used).
+<br />
 ![aws-lab1(2)](https://github.com/user-attachments/assets/f68b2978-0008-4c79-b422-8537397f2ae4)
 
+<br />
+As a final step, I created the IAM role for the Lambda function and added Amazon S3 permissions to the role so the Lambda function can read, write, and delete objects from the document bucket that I previosuly created.
 <br />
 
 ![aws-lab1(3)](https://github.com/user-attachments/assets/fa6f8a6e-dd33-456c-a448-4a512d881e78)
